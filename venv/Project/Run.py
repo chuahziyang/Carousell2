@@ -29,9 +29,9 @@ with open('run_results_new.json',encoding="utf8") as json_file:
 
     for i in data['list1']:
         item = product(i["Description"],i["Title"], i["selection2"], i["selection1"])
-        os.mkdir(remove(item.title))
+        os.mkdir(remove(item.title[:100]))
         print(os.getcwd())
-        os.chdir(remove(item.title))
+        os.chdir(remove(item.title[:100]))
         i = 0
         for image in item.link:
             print(image)
